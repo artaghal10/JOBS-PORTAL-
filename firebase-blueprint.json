@@ -1,0 +1,43 @@
+{
+  "entities": {
+    "Job": {
+      "title": "Job Posting",
+      "description": "A job opportunity listing",
+      "type": "object",
+      "properties": {
+        "id": { "type": "string" },
+        "title": { "type": "string" },
+        "description": { "type": "string" },
+        "company": { "type": "string" },
+        "location": { "type": "string" },
+        "category": { "type": "string", "enum": ["Government", "Private", "Overseas", "Scholarship", "Newspaper"] },
+        "deadline": { "type": "string", "format": "date-time" },
+        "whatsapp": { "type": "string" },
+        "imageUrl": { "type": "string" },
+        "featured": { "type": "boolean" },
+        "createdAt": { "type": "string", "format": "date-time" }
+      },
+      "required": ["title", "description", "category", "deadline", "whatsapp"]
+    },
+    "Setting": {
+      "title": "App Setting",
+      "description": "Global application configuration",
+      "type": "object",
+      "properties": {
+        "key": { "type": "string" },
+        "value": { "type": "string" }
+      },
+      "required": ["key", "value"]
+    }
+  },
+  "firestore": {
+    "jobs": {
+      "schema": "Job",
+      "description": "Collection of all job and scholarship listings"
+    },
+    "settings": {
+      "schema": "Setting",
+      "description": "Global app settings"
+    }
+  }
+}

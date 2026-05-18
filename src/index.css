@@ -1,0 +1,59 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.cdnfonts.com/css/jameel-noori-nastaleeq');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Montserrat", ui-sans-serif, system-ui, sans-serif;
+  --font-urdu: "Jameel Noori Nastaleeq", serif;
+  
+  --color-corporate-blue: #1E3A8A;
+  --color-corporate-deep: #0F172A;
+  --color-corporate-accent: #3730A3;
+  --color-corporate-light: #E0E7FF;
+  --color-purple-tech: #6D28D9;
+  --color-purple-glow: #8B5CF6;
+  
+  --color-brand-start: #1E3A8A;
+  --color-brand-end: #6D28D9;
+  
+  --color-slate-50: #F8FAFC;
+  --color-slate-100: #F1F5F9;
+  --color-slate-200: #E2E8F0;
+  --color-slate-400: #94A3B8;
+  --color-slate-500: #64748B;
+  --color-slate-600: #475569;
+  --color-slate-800: #1E293B;
+  --color-slate-900: #0F172A;
+}
+
+@layer base {
+  body {
+    @apply bg-[#F9FAFB] text-slate-800 font-sans antialiased selection:bg-purple-tech/20 selection:text-purple-tech;
+  }
+}
+
+.urdu-text {
+  font-family: var(--font-urdu);
+}
+
+.glass-morphism {
+  @apply bg-white/70 backdrop-blur-md border border-white/20;
+}
+
+.neon-glow {
+  box-shadow: 0 0 15px rgba(109, 40, 217, 0.4);
+}
+
+.neon-glow-hover:hover {
+  box-shadow: 0 0 25px rgba(109, 40, 217, 0.6);
+}
+
+@keyframes recruitment-loop {
+  0% { transform: translateY(10px); opacity: 0; }
+  50% { transform: translateY(0); opacity: 1; }
+  100% { transform: translateY(-10px); opacity: 0; }
+}
+
+.animate-recruitment {
+  animation: recruitment-loop 3s infinite ease-in-out;
+}

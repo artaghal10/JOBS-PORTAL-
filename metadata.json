@@ -1,0 +1,6 @@
+{
+  "name": "JobUstad Pakistan",
+  "description": "Premium job portal for the latest government, private, and newspaper jobs in Pakistan. Expert guidance for your career.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
